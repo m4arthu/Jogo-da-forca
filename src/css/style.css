@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.jogo-container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.jogo-container img {
+    width: 400px;
+}
+
+.jogo-container button {
+    font-size: 20px ;
+    font-weight: 700 ;
+    border-radius: 8px;
+    color: white;
+    border: inherit;
+    background: #27AE60;
+    margin-top: 30px;
+    width: 200px;
+    height: 60px;
+}
+
+.teclado-space{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.teclado-container {
+    display: grid;
+    grid-template-columns: 60px repeat(12, 50px);
+    gap: 10px;
+}
+
+.teclado-letra{
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+}
+
+.disabled{
+    background-color:#798A9F;
+}
+
+.abbled{
+    background: #E1ECF4;
+}
