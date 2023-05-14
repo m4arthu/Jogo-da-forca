@@ -1,15 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
 import Jogo from "./Jogo"
 import Letras from "./Letras"
 import Teclado from "./Teclado"
-import Palavras from "./Palavras"
+
 
 function App() {
+  const [abbled, setabble] = useState("disabled")
+  const [disabledButton, disabled] = useState("abbled")
+  const [erros, seterro] = useState(0)
+  const [palavra, setPalavra] = useState([])
+  const [primeiraRender, setVez] = useState(true)
+  const [palavra2, setPalavra2] = useState([])
+  const [gamestatus, setGameStatus] = useState("")
   return (
     <React.Fragment>
-      <Jogo/>
-      <Letras/>
-      <Teclado />
+      <div className="jogo-container">
+        <Jogo setabble={setabble} gamestatus={gamestatus} setGameStatus={setGameStatus} setVez={setVez} erros={erros} seterro={seterro} setPalavra2={setPalavra2} setPalavra={setPalavra}  button={disabledButton} disabled={disabled} />
+        <Letras gamestatus={gamestatus} disable={disabled} disabledButton={disabledButton} palavra2={palavra2} primeiraRender={primeiraRender} setVez={setVez} palavra={palavra} />
+      </div>
+      <Teclado disable={disabled} setGameStatus={setGameStatus} primeiraRender={primeiraRender} palavra2 ={palavra2} setPalavra2={setPalavra2} setVez={setVez} palavra={palavra} erros={erros} setErro={seterro} habilitado={abbled} />
     </React.Fragment>
   )
 }

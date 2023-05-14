@@ -20,6 +20,7 @@ body {
 }
 
 .jogo-container button {
+    position: relative;
     font-size: 20px ;
     font-weight: 700 ;
     border-radius: 8px;
@@ -52,8 +53,29 @@ body {
 
 .disabled{
     background-color:#798A9F;
+    color: #757272;
 }
+
 
 .abbled{
     background: #E1ECF4;
+}
+
+
+
+.palavra{
+    font-size: 40px;
+    position: absolute;
+    top: 400px;
+    right: 250px;
+    display: flex;
+}
+.palavra p {
+    margin: 0 5px;
+}
+.green{
+    color:green
+}
+.red{
+    color: red;
 }
