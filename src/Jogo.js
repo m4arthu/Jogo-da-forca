@@ -8,29 +8,43 @@ const imgs =
 
 function Jogo(props) {
     function click() {
+        
         let ramdom = Math.floor(Math.random() * palavras.length)
         let arrayPlavra = []
         for (let i = 0; i < palavras[ramdom].length; i++) {
             arrayPlavra.push(palavras[ramdom][i])
         }
-        props.setabble("abbled")
+        props.Setabble("abbled")
         props.disabled("disabled")
-        if (props.gamestatus !== "") {
-            props.setGameStatus("")
-            setTimeout(()=>{
-                click()
-            },500)
-        } else {
-            props.setPalavra(arrayPlavra)
-            console.log(palavras[ramdom])
-        }
+        props.setPalavra(arrayPlavra)
+        console.log(palavras[ramdom])
+
     }
     return (
         <React.Fragment>
             <img src={imgs[props.erros]} alt={`forca${props.erros}`}></img>
             {props.button === "abbled" ?
                 <button onClick={() => {
-                    click()
+                    document.querySelectorAll(".teclado-letra").forEach((letra)=>{
+                        letra.classList.add("abbled")
+                        letra.classList.remove("disabled")
+                        letra.removeAttribute("disabled")
+                    })
+                    if (props.gamestatus !== "") {
+                        let ramdom = Math.floor(Math.random() * palavras.length)
+                        let arrayPlavra = []
+                        for (let i = 0; i < palavras[ramdom].length; i++) {
+                            arrayPlavra.push(palavras[ramdom][i])
+                        }
+                        props.setVez(true)
+                        props.seterro(0)
+                        props.setjogardenovo(true)
+                        props.setGameStatus("")
+                        props.setPalavra(arrayPlavra)
+                        console.log(palavras[ramdom])
+                    } else {
+                        click()
+                    }
                 }}>Escolher Palavra
                 </button> : <button disabled >Escolher Palavra</button>}
         </React.Fragment>
