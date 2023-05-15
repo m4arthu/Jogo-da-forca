@@ -47,7 +47,7 @@ function Jogo(props) {
                         click()
                     }
                 }}>Escolher Palavra
-                </button> : <button disabled >Escolher Palavra</button>}
+                </button> : <button data-test="choose-word" disabled >Escolher Palavra</button>}
         </React.Fragment>
     )
 
