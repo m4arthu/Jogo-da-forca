@@ -1,5 +1,5 @@
 import React from "react"
-import palavras from "./Palavras"
+import palavras from "./palavras"
 const imgs =
     ["./assets/forca0.png", "./assets/forca1.png",
         "./assets/forca2.png", "./assets/forca3.png",
