@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import Jogo from "./Jogo"
-import Letras from "./Letras"
-import Teclado from "./Teclado"
+import Jogo from "./Jogo.js"
+import Letras from "./Letras.js"
+import Teclado from "./Teclado.js"
 
 
 function App() {
