@@ -17,9 +17,9 @@ function App() {
     <React.Fragment>
       <div className="jogo-container">
         <Jogo jogardenovo={jogardenovo} setjogardenovo={setjogardenovo} Setabble={setabble} gamestatus={gamestatus} setGameStatus={setGameStatus} setVez={setVez} erros={erros} seterro={seterro} setPalavra2={setPalavra2} setPalavra={setPalavra}  button={disabledButton} disabled={disabled} />
-        <Letras setGameStatus={setGameStatus}  gamestatus={gamestatus} disable={disabled} disabledButton={disabledButton} palavra2={palavra2} primeiraRender={primeiraRender} setVez={setVez} palavra={palavra} />
+        <Letras jogardenovo={jogardenovo} setGameStatus={setGameStatus}  gamestatus={gamestatus} disable={disabled} disabledButton={disabledButton} palavra2={palavra2} primeiraRender={primeiraRender} setVez={setVez} palavra={palavra} />
       </div>
-      <Teclado jogardenovo={jogardenovo} disable={disabled} setGameStatus={setGameStatus} primeiraRender={primeiraRender} palavra2 ={palavra2} setPalavra2={setPalavra2} setVez={setVez} palavra={palavra} erros={erros} setErro={seterro} habilitado={abbled} />
+      <Teclado gamestatus={gamestatus} jogardenovo={jogardenovo} setjogardenovo={setjogardenovo} disable={disabled} setGameStatus={setGameStatus} primeiraRender={primeiraRender} palavra2 ={palavra2} setPalavra2={setPalavra2} setVez={setVez} palavra={palavra} erros={erros} setErro={seterro} habilitado={abbled} />
     </React.Fragment>
   )
 }

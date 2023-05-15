@@ -40,6 +40,7 @@ function Jogo(props) {
                         props.seterro(0)
                         props.setjogardenovo(true)
                         props.setGameStatus("")
+                        props.setPalavra2([])
                         props.setPalavra(arrayPlavra)
                         console.log(palavras[ramdom])
                     } else {

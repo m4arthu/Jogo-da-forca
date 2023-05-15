@@ -1,4 +1,5 @@
 import React from "react"
+
 function Letra(props) {
     return (
         <p className={props.color}>
@@ -11,6 +12,7 @@ function Letras(props) {
     var color = ""
     let palavra = []
     if (props.primeiraRender === true) {
+        palavra = []
         for (let i = 0; i < props.palavra.length; i++) {
             palavra.push("_")
         }
