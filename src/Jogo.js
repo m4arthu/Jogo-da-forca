@@ -22,9 +22,9 @@ function Jogo(props) {
     }
     return (
         <React.Fragment>
-            <img src={imgs[props.erros]} alt={`forca${props.erros}`}></img>
+            <img data-test="game-image"src={imgs[props.erros]} alt={`forca${props.erros}`}></img>
             {props.button === "abbled" ?
-                <button onClick={() => {
+                <button data-test="choose-word" onClick={() => {
                     document.querySelectorAll(".teclado-letra").forEach((letra)=>{
                         letra.classList.add("abbled")
                         letra.classList.remove("disabled")

@@ -13,7 +13,7 @@ function Letra(props) {
     }
     if (props.disabled === "disabled") {
         return (
-            <button disabled className={`teclado-letra disabled`}>
+            <button data-test="letter" disabled className={`teclado-letra disabled`}>
                 {props.value}
             </button>
         )

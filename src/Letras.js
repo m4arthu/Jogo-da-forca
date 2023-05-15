@@ -47,7 +47,7 @@ function Letras(props) {
 
     return (
         <React.Fragment>
-            <div className="palavra">
+            <div data-test="word" className="palavra">
                 {palavra.map((l, index = props.palavra.indexOf(l)) => <Letra key={index} setGameStatus={props.setGameStatus} gamestatus={props.gamestatus} palavra={palavra} palavra2={props.palavra2} color={color} value={l} />)}
             </div>
         </React.Fragment>
