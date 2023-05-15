@@ -20,7 +20,7 @@ function Letra(props) {
     } else {
 
         return (
-            <button onClick={() => {
+            <button data-test="letter" onClick={() => {
                 if (disabled !== "disabled") {
                     setabble("disabled")
                     disabled = "disabled"
